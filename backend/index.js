@@ -57,7 +57,7 @@ app.use(cors());
 app.use(express.static('public'));
 
 // MongoDB connection
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect('mongodb+srv://game:gamery@aws1.vunqs.mongodb.net/?retryWrites=true&w=majority&appName=AWS1', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -178,7 +178,7 @@ app.post('/api/users', async (req, res) => {
 });
 
 // Start server
-const PORT = process.env.PORT || 7000;
+const PORT = 7000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
