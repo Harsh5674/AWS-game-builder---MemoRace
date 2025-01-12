@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Simon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container d-flex align-items-center">
+      <div class="nav-brand">
+        <h2>MemoRace</h2>
+      </div>
+      
+      <div class="nav-menu">
+        <ul>
+          <li><a href="#" id="highScores">Records</a></li>
+          <li><a href="#" id="login">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <h1 id="level-title">Press A Key to Start</h1>
+  <div class="container">
+    <div class="row">
+      
+      <div type="button" id="green" class="btn green">
+
+      </div>
+
+      <div type="button" id="red" class="btn red">
+
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div type="button" id="yellow" class="btn yellow">
+
+      </div>
+      <div type="button" id="blue" class="btn blue">
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Add this after your game container but before the footer -->
+<div id="highScoresContainer" class="high-scores-overlay" style="display: none;">
+  <div class="high-scores-content">
+      <div class="high-scores-header">
+          <h2>High Scores</h2>
+          <button id="closeHighScores" class="close-button">&times;</button>
+      </div>
+      <div id="highScores">
+          <div class="loading">Loading scores...</div>
+      </div>
+  </div>
+</div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="game.js" charset="utf-8"></script>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="social-links">
+        <p>Follow Us</p>
+        <div class="social-icons">
+          <a class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a class="social-icon">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a class="social-icon">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>  
+
+</body>
+
+</html>
