@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
 </head>
 
 <body>
@@ -51,6 +52,20 @@
 
   </div>
 
+  <!-- Add this after your game container but before the footer -->
+<div id="highScoresContainer" class="high-scores-overlay" style="display: none;">
+  <div class="high-scores-content">
+      <div class="high-scores-header">
+          <h2>High Scores</h2>
+          <button id="closeHighScores" class="close-button">&times;</button>
+      </div>
+      <div id="highScores">
+          <div class="loading">Loading scores...</div>
+      </div>
+  </div>
+</div>
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="game.js" charset="utf-8"></script>
 
@@ -82,3 +97,4 @@
 </body>
 
 </html>
+
