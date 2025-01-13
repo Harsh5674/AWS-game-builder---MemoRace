@@ -1,0 +1,27 @@
+version: 1
+backend:
+  phases:
+    build:
+      commands:
+        - cd backend
+        - npm install
+  artifacts:
+    baseDirectory: backend
+    files:
+      - '**/*'
+    exclude:
+      - node_modules/**/*
+frontend:
+  phases:
+    build:
+      commands:
+        - cd frontend
+        - npm install
+        - npm run build
+  artifacts:
+    baseDirectory: frontend/build
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
