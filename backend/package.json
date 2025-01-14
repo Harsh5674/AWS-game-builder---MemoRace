@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon",
     "start": "node index.js",
-    "build": "echo 'Building backend...'"
+    "build": "npm install"
   },
   "author": "Harsh",
   "license": "ISC",
